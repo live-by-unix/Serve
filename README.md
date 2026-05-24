@@ -1,10 +1,8 @@
-Serve — A Lightweight Static HTTP/HTTPS File Hoster
+# Serve — A Lightweight Static HTTP/HTTPS File Hoster
 
-Serve is a tiny, fast, zero‑config static file hoster written in Rust. It is designed to behave like a modern, optimized version of "python3 -m http.server" but with HTTPS support, directory listings, index.html handling, and clean logging.
+Serve is a tiny, fast, zero‑config static file hoster written in Rust. It is designed to behave like a modern, optimized version of ```python3 -m http.server``` but with self signed HTTPS support, directory listings, index.html handling, and clean logging. Serve hosts any directory over HTTP or HTTPS with a single command. 
 
-Serve hosts any directory over HTTP or HTTPS with a single command.
-
-Features
+## Features
 
 - Serve any directory over HTTP or HTTPS
 - Default port 8000 if none is provided
@@ -16,43 +14,61 @@ Features
 - Simple, predictable CLI
 - Zero configuration, zero dependencies beyond the binary
 
-Installation
+## Installation
+
+Run this command:
+
+```bash
+git clone https://github.com/live-by-unix/serve.git && cd serve
+```
 
 Build from source:
 
-    cargo build --release
+```bash
+cargo build --release
+```
 
-The binary will be located at:
+The binary will be located at: `target/release/serve`
 
-    target/release/serve
-
-Usage
+## Usage
 
 Basic HTTP hosting:
 
-    serve .
+```bash
+serve .
+```
 
 HTTP on a specific port:
 
-    serve . 5000 --http
+```bash
+serve . 5000 --http
+```
 
 HTTPS hosting:
 
-    serve . 5000 --https
+```bash
+serve . 5000 --https
+```
 
 Ignore index.html and show directory listing:
 
-    serve . 8000 -i
+```bash
+serve . 8000 -i
+```
 
 Show version:
 
-    serve --version
+```bash
+serve --version
+```
 
 Show help:
 
-    serve --help
+```bash
+serve --help
+```
 
-Behavior
+## Behavior
 
 Serve always hosts the directory provided as the first argument.
 
@@ -72,23 +88,32 @@ HTTPS certificates:
 - Stored in ~/.serve/
 - Auto‑generated on first HTTPS run
 
-Examples
+## Examples
 
 Serve the current directory on port 8000:
 
-    serve .
+```bash
+serve .
+```
 
 Serve a folder on port 3000:
 
-    serve public 3000
+```bash
+serve public 3000
+```
 
 Serve with HTTPS:
 
-    serve site 8443 --https
+```bash
+serve site 8443 --https
+```
 
 Ignore index.html:
 
-    serve . -i
+```bash
+serve . -i
+```
 
-License
-BSD 3 LICENSE. 
+## License
+
+BSD 3 LICENSE
