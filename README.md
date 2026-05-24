@@ -91,5 +91,4 @@ Ignore index.html:
     serve . -i
 
 License
-
-MIT License. See LICENSE for details.
+BSD 3 LICENSE. 
