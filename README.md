@@ -67,6 +67,7 @@ Show help:
 ```bash
 serve --help
 ```
+**GREAT NEWS! Unix executable file for macOS M series devices has been attached below with zipped version of exec file as well. It is still highly recommended to run manually. Both the binary, it's zip and source code is under BSD-3.0 LICENSE. See LICENSE for details**
 
 ## Behavior
 
